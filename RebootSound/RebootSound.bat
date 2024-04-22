@@ -1,6 +1,6 @@
 @echo off
 
-:: BatchGotAdmin
+:: BatchGotAdmin - From Lokesh Kumar on Stack Overflow
 ::-------------------------------------
 REM  --> Check for permissions
 >nul 2>&1 "%SYSTEMROOT%\system32\cacls.exe" "%SYSTEMROOT%\system32\config\system"
@@ -23,6 +23,8 @@ if '%errorlevel%' NEQ '0' (
 :gotAdmin
     pushd "%CD%"
     CD /D "%~dp0"
+
+:: RebootSound - From u/roller3d on Reddit
 ::--------------------------------------
 
 net stop audiosrv
